@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Blog</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        /* 기본 레이아웃 스타일 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 중앙 정렬 컨테이너 (참고 사이트와 유사한 폭) */
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            min-height: 100vh; /* 화면 꽉 차게 */
+        }
+
+        /* 헤더 스타일 */
+        header {
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; color: #222; }
+        .date { font-size: 0.9rem; color: #888; }
+
+        /* 본문 타이포그래피 */
+        h2 { 
+            margin-top: 50px; 
+            font-size: 1.5rem; 
+            border-left: 5px solid #2878f0; /* 파란색 강조 선 */
+            padding-left: 15px;
+            color: #333;
+        }
+        h3 { margin-top: 30px; font-size: 1.2rem; color: #444; }
+        p { margin-bottom: 1.2rem; word-break: keep-all; }
+        
+        /* 링크 스타일 */
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* 인용구 스타일 */
+        blockquote {
+            border-left: 4px solid #ddd;
+            margin: 0;
+            padding-left: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* 이미지 스타일 */
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>여기에 글 제목을 입력하세요 (예: PCA의 기하학적 의미)</h1>
+        <p class="date">2026년 1월 12일 · Author Name</p>
+    </header>
+
+    <article>
+        <p>이곳에 서론을 작성합니다. GitHub Pages를 이용하면 무료로 깔끔한 기술 블로그를 운영할 수 있습니다.</p>
+
+        <h2>1. 수식 입력 예시</h2>
+        <p>공학 블로그에 필수적인 수식입니다. LaTeX 문법을 그대로 사용할 수 있습니다.</p>
+        
+        <p>문장 내에 $f(x) = x^2$ 처럼 수식을 넣을 수도 있고, 아래처럼 별도 블록으로 작성할 수도 있습니다.</p>
+        
+        $$
+        \mathbf{C} = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})(x_i - \bar{x})^T
+        $$
+
+        <h2>2. 코드 입력 예시</h2>
+        <p>Python이나 C++ 코드를 깔끔하게 보여줍니다.</p>
+
+        <pre><code class="language-python">
+import numpy as np
+
+def compute_covariance_matrix(X):
+    mean_vec = np.mean(X, axis=0)
+    cov_mat = (X - mean_vec).T.dot((X - mean_vec)) / (X.shape[0]-1)
+    return cov_mat
+        </code></pre>
+
+        <h2>3. 결론</h2>
+        <p>원하는 내용을 자유롭게 수정해서 사용하세요.</p>
+    </article>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+
+</body>
+</html>
